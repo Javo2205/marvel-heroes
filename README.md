@@ -1,27 +1,34 @@
-# MarvelHeroes
+# List of Heroes Application
+This project is a simple Angular application that displays a list of heroes, allows users to add new heroes, and view hero details.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.3.
+## Table of Contents
+* [Prerequisites](#prerequisites)
+* [Getting Started](#getting-started)
+* [Running the Application](#running-the-application)
+* [How to Contribute](#how-to-contribute)
 
-## Development server
+# Prerequisites
+Before you begin, make sure you have the following software installed on your computer:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Node.js and npm (https://nodejs.org/)
+2. Angular CLI (https://cli.angular.io/)
 
-## Code scaffolding
+# Getting Started
+Follow these steps to set up the project on your local machine:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone this repository: git clone https://github.com/yourusername/list-of-heroes.git
+2. Navigate to the project folder: cd list-of-heroes
+3. Install the dependencies: npm install
 
-## Build
+# Running the Application
+1. Run the application in development mode using ng serve. Navigate to http://localhost:4200/ in your browser. The application will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# How to Contribute
+To contribute to the project, follow these steps:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Fork the repository on your GitHub account.
+2. Clone the repository on your local machine.
+3. Create a new branch with a descriptive name of the feature or fix you want to implement (e.g., feature/new-feature or fix/bug-fix).
+4. Make your changes on the new branch and ensure the application works correctly and passes all unit tests.
+5. Commit your changes and push the new branch to your repository on GitHub.
+6. Create a Pull Request from the new branch to the main branch of the original repository. Make sure to describe your changes clearly and concisely in the Pull Request description.
