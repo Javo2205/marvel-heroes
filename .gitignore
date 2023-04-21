@@ -41,5 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#env
-/src/env
+.gitignore
+src/env/environment.ts
