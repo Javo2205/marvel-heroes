@@ -16,8 +16,8 @@ Before you begin, make sure you have the following software installed on your co
 # Getting Started
 Follow these steps to set up the project on your local machine:
 
-1. Clone this repository: git clone https://github.com/yourusername/list-of-heroes.git
-2. Navigate to the project folder: cd list-of-heroes
+1. Clone this repository: git clone https://github.com/Javo2205/marvel-heroes.git
+2. Navigate to the project folder: cd marvel-heroes
 3. Install the dependencies: npm install
 
 # Running the Application
