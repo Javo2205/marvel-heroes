@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { By } from '@angular/platform-browser';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroesComponent } from './characters/heroes/heroes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {

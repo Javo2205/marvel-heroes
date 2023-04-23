@@ -47,7 +47,6 @@ export class MarvelApiService {
       map((response) => {
         return {
           characters: response.data.results.map((characterData) => {
-            // Transforma los datos del personaje aquí si es necesario
             return {
               id: characterData.id,
               name: characterData.name,

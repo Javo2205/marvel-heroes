@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, } from 'rxjs/operators';
 import { Character } from 'src/app/models/character';
 import { MarvelApiService } from 'src/app/services/marvel-api.service';
@@ -13,27 +13,17 @@ import Swal from 'sweetalert2';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroesComponent implements OnInit {
-  characters$: BehaviorSubject<{ characters: Character[]; total: number }> = new BehaviorSubject<{ characters: Character[]; total: number }>({
-    characters: [],
-    total: 0,
-  });
-  searchForm: FormGroup;
+  totalPages = 1;
   currentPage = 1;
   itemsPerPage = 20;
-  totalPages = 1;
-  totalCharacters = 0;
 
-  selectedCharacter: Character = {
-    description: '',
-    id: 0,
-    name: '',
-    thumbnail: ''
-  };
-
+  searchForm: FormGroup;
   heroesFound: boolean = true;
-  modifiedCharacters: Map<number, Character> = new Map<number, Character>();
+  selectedCharacter: Partial<Character> = {};
   deletedCharacters: Set<Character> = new Set<Character>();
   characterUpdates: { [id: number]: Partial<Character> } = {};
+  modifiedCharacters: Map<number, Character> = new Map<number, Character>();
+  characters$ = new BehaviorSubject<{ characters: Character[], total: number }>({ characters: [], total: 0 });
 
 
   constructor(private marvelApiService: MarvelApiService, private formBuilder: FormBuilder, private changeDetector: ChangeDetectorRef) {
@@ -135,17 +125,12 @@ export class HeroesComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         if (result.value) {
-          this.updateCharacterName(this.selectedCharacter, result.value.newName);
+          this.updateCharacterName(this.selectedCharacter as Character, result.value.newName);
         }
       } else if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {
-        this.deleteCharacter(this.selectedCharacter);
+        this.deleteCharacter(this.selectedCharacter as Character);
       }
-      this.selectedCharacter = {
-        description: '',
-        id: 0,
-        name: '',
-        thumbnail: ''
-      };
+      this.selectedCharacter = {};
     });
   }
 
@@ -181,5 +166,4 @@ export class HeroesComponent implements OnInit {
       }
     }
   }
-
 }

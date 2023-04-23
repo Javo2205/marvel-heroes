@@ -3,5 +3,4 @@ export interface Character {
   name: string;
   description: string;
   thumbnail: string;
-  // Agrega aquí cualquier otra propiedad que necesites
 }

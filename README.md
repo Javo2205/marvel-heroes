@@ -1,5 +1,5 @@
 # List of Heroes Application
-This project is a simple Angular application that displays a list of heroes, allows users to add new heroes, and view hero details.
+This project is a simple Angular application that displays a list of heroes, allows users to edit a name heroe, and view hero details.
 
 ## Table of Contents
 * [Prerequisites](#prerequisites)
